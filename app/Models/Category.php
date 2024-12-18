@@ -11,5 +11,11 @@ class Category extends Model
      'description'
     ];
 
+    public function courses()
+{
+    return $this->belongsToMany(Course::class, 'category_course');
+}
+
+
     
 }

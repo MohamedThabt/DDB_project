@@ -14,4 +14,16 @@ class Course extends Model
         'price',
         'instructor_id'
     ];
+
+    public function categories()
+{
+    return $this->belongsToMany(Category::class, 'category_course');
+}
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'course_user', 'course_id', 'user_id');
+    }
+
+
 }
