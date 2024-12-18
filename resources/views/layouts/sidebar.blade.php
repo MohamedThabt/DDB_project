@@ -16,6 +16,9 @@
 							<li><a href="#side3" data-toggle="tab"><i class="ion ion-md-contacts tx-18 ml-2"></i> Friends</a></li>
 						</ul>
 					</div>
+
+
+{{-- 
 					<div class="tab-content">
 						<div class="tab-pane active " id="side1">
 							<div class="list d-flex align-items-center border-bottom p-3">
@@ -154,12 +157,14 @@
 									</div>
 								</a>
 							</div>
-						</div>
-						<div class="tab-pane  " id="side2">
+						</div> --}}
+
+
+						{{-- <div class="tab-pane  " id="side2">
 							<div class="list-group list-group-flush ">
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/12.jpg')}}"><span class="avatar-status bg-success"></span></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"><span class="avatar-status bg-success"></span></span>
 									</div>
 									<div>
 										<strong>Madeleine</strong> Hey! there I' am available....
@@ -170,7 +175,7 @@
 								</div>
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/1.jpg')}}"></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"></span>
 									</div>
 									<div>
 										<strong>Anthony</strong> New product Launching...
@@ -181,7 +186,7 @@
 								</div>
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/2.jpg')}}"><span class="avatar-status bg-success"></span></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"><span class="avatar-status bg-success"></span></span>
 									</div>
 									<div>
 										<strong>Olivia</strong> New Schedule Realease......
@@ -192,7 +197,7 @@
 								</div>
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/8.jpg')}}"><span class="avatar-status bg-success"></span></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"><span class="avatar-status bg-success"></span></span>
 									</div>
 									<div>
 										<strong>Madeleine</strong> Hey! there I' am available....
@@ -203,7 +208,7 @@
 								</div>
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/11.jpg')}}"></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"></span>
 									</div>
 									<div>
 										<strong>Anthony</strong> New product Launching...
@@ -214,7 +219,7 @@
 								</div>
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-3">
-										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/6.jpg')}}"><span class="avatar-status bg-success"></span></span>
+										<span class="avatar avatar-lg brround cover-image" data-image-src="{{URL::asset('assets/img/faces/user.png')}}"><span class="avatar-status bg-success"></span></span>
 									</div>
 									<div>
 										<strong>Olivia</strong> New Schedule Realease......
@@ -235,8 +240,10 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tab-pane  " id="side3">
+						</div> --}}
+
+
+						{{-- <div class="tab-pane  " id="side3">
 							<div class="list-group list-group-flush ">
 								<div class="list-group-item d-flex  align-items-center">
 									<div class="ml-2">
@@ -393,7 +400,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>
