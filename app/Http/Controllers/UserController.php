@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Course;
+
 
 class UserController extends Controller
 {
@@ -11,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users= User::orderby('id','desc')->paginate(10);
+        return view('dashboard.users',compact('users'));
     }
 
     /**
@@ -35,7 +39,8 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('dashboard.user-details', compact('user'));
     }
 
     /**
@@ -43,7 +48,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -59,6 +65,18 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('user.index')->with('success', 'User deleted successfully.');
+    }
+
+    public function userAnalytics(){
+        $studentCount = User::where('type', 'student')->count();
+        $adminCount = User::where('type', 'admin')->count();
+        $instructorCount = User::where('type', 'instructor')->count();
+        $allUsers= User::count();
+        $allCourses= Course::count();
+
+        return view('dashboard.analytics', compact('studentCount', 'adminCount', 'instructorCount','allUsers','allCourses'));
     }
 }

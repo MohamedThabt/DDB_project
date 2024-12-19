@@ -23,9 +23,15 @@ class Course extends Model
     return $this->belongsToMany(Category::class, 'category_course');
 }
 
-    public function users()
+    public function students()
     {
-        return $this->belongsToMany(User::class, 'course_user', 'course_id', 'user_id');
+        return $this->belongsToMany(User::class, 'course_user', 'course_id', 'user_id')
+                    ->where('type', 'student');
+    }
+
+    public function instructor()
+    {
+        return $this->belongsTo(User::class, 'instructor_id');
     }
 
     public function reviews()

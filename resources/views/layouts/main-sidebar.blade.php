@@ -21,7 +21,21 @@
 					</div>
 				</div>
 
-				{{-- TODO Sidebar content  --}}
+				{{-- Admin options --}}
+				<div>
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#">
+							<i class="side-menu__icon fe fe-grid"></i>
+							<span class="side-menu__label">Dashboard</span>
+							<i class="angle fe fe-chevron-down"></i>
+						</a>
+						<ul class="slide-menu">
+							<li><a class="slide-item" href="{{ route('analytics') }}">Analytics</a></li>
+							<li><a class="slide-item" href="{{ route('user.index') }}">Users</a></li>
+							<li><a class="slide-item" href="{{ route('courses.analytics') }}">Courses</a></li>
+						</ul>
+					</li>
+				</div>
 
 
 			</div>

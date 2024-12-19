@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
@@ -55,6 +56,12 @@ Route::prefix('users')->group(function () {
 Route::get('/coming-soon', function () {
     return view('coming_soon.underconstruction');
 })->name('coming-soon');
+
+// TODO authenticate it for only admins
+// Admin analytics
+Route::get('/analytics', [UserController::class, 'userAnalytics'])->name('analytics');
+Route::get('analytics/courses', [CourseController::class, 'adminViewCourses'])->name('courses.analytics');
+
 
 
 
