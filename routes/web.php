@@ -51,8 +51,10 @@ Route::prefix('users')->group(function () {
     });
 });
 
-
-
+// Coming Soon
+Route::get('/coming-soon', function () {
+    return view('coming_soon.underconstruction');
+})->name('coming-soon');
 
 
 

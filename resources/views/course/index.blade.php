@@ -21,8 +21,9 @@
 				{{-- ! put content here (cursor - top rated courses -all course - footer- )--}}
 
 				{{-- cursor --}}
-				{{-- top rated courses --}}
 
+
+				{{-- top rated courses --}}
 				<div class="container py-5">
 					<!-- Main row wrapper with bottom margin -->
 					<div class="row mb-5">
