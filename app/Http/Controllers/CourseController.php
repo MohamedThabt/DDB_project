@@ -19,6 +19,10 @@ class CourseController extends Controller
         return view('course.index',compact('courses'));
     }
 
+    public function adminViewCourses(){
+        $courses = Course::orderby('id','desc')->with('instructor')->paginate(10);
+        return view('dashboard.courses',compact('courses'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -106,7 +110,7 @@ class CourseController extends Controller
     {
         $course = Course::find($id);
         $course->delete();
-        return redirect()->route('course.index')->with('success', 'Course deleted successfully.');
+        return redirect()->route('courses.analytics')->with('success', 'Course deleted successfully.');
     }
 
     public function search(Request $request)
