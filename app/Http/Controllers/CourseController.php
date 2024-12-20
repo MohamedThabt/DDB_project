@@ -18,6 +18,11 @@ class CourseController extends Controller
         $courses= Course::orderby('id','desc')->paginate(10);
         return view('course.index',compact('courses'));
     }
+    public function home()
+    {
+        $courses= Course::orderby('id','desc')->paginate(10);
+        return view('course.home',compact('courses'));
+    }
 
     public function adminViewCourses(){
         $courses = Course::orderby('id','desc')->with('instructor')->paginate(10);

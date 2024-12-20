@@ -20,6 +20,7 @@ Route::prefix('profile')->group(function () {
     });    
 });
 
+Route::get('/',[CourseController::class,'home'])->name('course.home');
 // COURSE ROUTES
 Route::prefix('courses')->group(function () {
     // Public routes

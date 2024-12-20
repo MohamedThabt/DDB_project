@@ -1,4 +1,4 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master') --}}
 @section('css')
 <!--  Owl-carousel css-->
 <link href="{{URL::asset('assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
@@ -7,21 +7,17 @@
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
-				<div class="breadcrumb-header justify-content-between">
-					<div class="left-content">
-						<div>
-						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, {{ Auth::user()->first_name }}</h2>
-						  <p class="mg-b-0">Do your best to build your future</p>
-						</div>
-					</div>
-				</div>
-				<!-- /breadcrumb -->
+				@extends('layouts.master2')
+@section('css')
+<!--  Owl-carousel css-->
+<link href="{{URL::asset('assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
+<!-- Maps css -->
+<link href="{{URL::asset('assets/plugins/jqvmap/jqvmap.min.css')}}" rel="stylesheet">
+@endsection
+@section('page-header')
+
 @endsection
 @section('content')
-				{{-- ! put content here (cursor - top rated courses -all course - footer- )--}}
-
-				{{-- cursor --}}
-
 
 				{{-- top rated courses --}}
 				<div class="container py-5">
@@ -95,13 +91,7 @@
 				
 										<!-- Button wrapper -->
 										<div class="d-grid">
-											<a href="{{ route('course.show', $course->id) }}" 
-											   class="btn btn-primary rounded-pill py-2">
-												<span class="d-flex align-items-center justify-content-center">
-													View Course Details
-													<i class="fas fa-arrow-right ms-2"></i>
-												</span>
-											</a>
+
 										</div>
 									</div>
 								</div>
@@ -134,3 +124,4 @@
 <script src="{{URL::asset('assets/js/index.js')}}"></script>
 <script src="{{URL::asset('assets/js/jquery.vmap.sampledata.js')}}"></script>	
 @endsection
+				<!-- /breadcrumb -->
