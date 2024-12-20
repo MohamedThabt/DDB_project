@@ -106,7 +106,7 @@
 													</a>
 													<a href="{{ route('user.edit', $user->id) }}" class="btn btn-sm btn-info">
 														<i class="las la-pen"></i>
-													</a>
+													</a>													
 													{{-- Delete Button --}}
 													<form action="{{ route('user.destroy', $user->id) }}" method="POST" class="d-inline">
 														@csrf

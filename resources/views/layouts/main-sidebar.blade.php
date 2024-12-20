@@ -33,6 +33,22 @@
 							<li><a class="slide-item" href="{{ route('analytics') }}">Analytics</a></li>
 							<li><a class="slide-item" href="{{ route('user.index') }}">Users</a></li>
 							<li><a class="slide-item" href="{{ route('courses.analytics') }}">Courses</a></li>
+							<li><a class="slide-item" href="{{ route('user.create') }}">Add user</a></li>
+						</ul>
+					</li>
+				</div>
+				<div>
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#">
+							<i class="side-menu__icon fe fe-grid"></i>
+							<span class="side-menu__label">Courses</span>
+							<i class="angle fe fe-chevron-down"></i>
+						</a>
+						<ul class="slide-menu">
+							<li><a class="slide-item" href="#">Analytics</a></li>
+							<li><a class="slide-item" href="#">Users</a></li>
+							<li><a class="slide-item" href="#">Courses</a></li>
+							<li><a class="slide-item" href="#">Add user</a></li>
 						</ul>
 					</li>
 				</div>

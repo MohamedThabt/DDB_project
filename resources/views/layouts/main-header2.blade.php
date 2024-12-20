@@ -40,31 +40,11 @@
                     </a>
                 </div>
 
-                {{-- Login/Profile Section --}}
-                @auth
-                    <div class="dropdown main-profile-menu nav nav-item nav-link">
-                        <a class="profile-user d-flex" href=""><img alt="" src="{{URL::asset('assets/img/faces/user.png')}}"></a>
-                        <div class="dropdown-menu">
-                            <div class="main-header-profile bg-primary p-3">
-                                <div class="d-flex wd-100p">
-                                    <div class="main-img-user"><img alt="" src="{{URL::asset('assets/img/faces/user.png')}}" class=""></div>
-                                </div>
-                            </div>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                            <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <i class="bx bx-log-out"></i> Sign Out
-                            </a>
-                        </div>
-                    </div>
-                @else
                     <div class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">
                             <i class="bx bx-log-in"></i> Register
                         </a>
                     </div>
-                @endauth
             </div>
         </div>
     </div>
